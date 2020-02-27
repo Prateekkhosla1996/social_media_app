@@ -1,0 +1,25 @@
+header {
+  height: 10vh;
+  background-color: blue;
+  display: flex;
+  color: white; }
+  header h1 {
+    text-transform: uppercase; }
+  header ul {
+    list-style: none;
+    text-decoration: none;
+    text-align: right;
+    margin-left: 72rem;
+    display: inline-flex; }
+    header ul li {
+      text-decoration: none;
+      text-align: right;
+      padding: 1rem; }
+      header ul li a {
+        text-decoration: none;
+        color: white;
+        text-transform: capitalize;
+        font-size: larger;
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap; }
