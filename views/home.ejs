@@ -3,23 +3,26 @@
 
 <section id="feed-posts">
     <h4>Post</h4>
+    <% if(locals.user){%>
     <form action="/posts/create" method="POST" id="newpostform">
         <textarea name="content"  cols="30" rows="3" placeholder="Type here...."></textarea>
         <input type="submit" value="Post">
     </form>
+    <%}%>
     <div id="posts-lists-container">
         <ul>
-            <% for(post of posts){%>
+            <% for(post of posts){ %>
                <li>
                    <p>
-                   <%= post.content%>
+                   <%= post.content %>
+                   <br>
                    <small>
-                       <%= post.user.name%>
+                       <%= post.user.name %>
                    </small>
                 </p>
                </li> 
             
-                <%}%>
+                <% } %>
         </ul>
     </div>
 </section>
