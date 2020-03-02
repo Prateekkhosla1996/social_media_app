@@ -1,5 +1,5 @@
 header {
-  height: 10vh;
+  height: 15vh;
   background-color: blue;
   display: flex;
   color: white; }
@@ -9,7 +9,7 @@ header {
     list-style: none;
     text-decoration: none;
     text-align: right;
-    margin-left: 72rem;
+    margin-left: 140vh;
     display: inline-flex; }
     header ul li {
       text-decoration: none;
