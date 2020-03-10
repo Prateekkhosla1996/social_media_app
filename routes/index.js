@@ -7,5 +7,6 @@ router.get('/',homeController.home)
 
 router.use('/users',require('./user'));
 router.use('/posts',require('./posts'));
+router.use('/comments',require('./comments'))
 // router.use('/routerName',require('./routerfile'))
 module.exports=router;
