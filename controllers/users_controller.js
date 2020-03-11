@@ -11,7 +11,7 @@ module.exports.signup=function(req,res){
         res.redirect('/users/profile');
     }
     return res.render('user_sign_up',{
-        title:"codeial|signup"
+        title:"coderhub|signup"
     })
 }
 //render the signin page
@@ -20,7 +20,7 @@ module.exports.signin=function(req,res){
         res.redirect('/users/profile');
     }
     return res.render('user_sign_in',{
-        title:"codeial|signin"
+        title:"coderhub|signin"
     })
 }
 //get the signup data
@@ -52,7 +52,7 @@ module.exports.create=function(req,res){
 }
 //sign in and create a session for user
 module.exports.createSession=function(req,res){
-    return res.redirect('/users/profile');
+    return res.redirect('/');
 }
 module.exports.distroySession=function(req,res){
     req.logout();

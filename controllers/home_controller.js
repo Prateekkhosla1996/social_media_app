@@ -4,15 +4,16 @@ module.exports.home=function(req,res){
     // res.cookie('user_id',25);
     // post.find({},function(err,posts){
     //     return res.render('home',{
-    //         title:"codeial | home",
+    //         title:"coderhub | home",
     //         posts:posts
     // });
     // });
 
     // populate the user of each posts
+    
     // post.find({}).populate('user').exec(function(err,posts){
     //     return res.render('home',{
-    //         title:"codeial | home",
+    //         title:"coderhub | home",
     //         posts: posts
     // });
     // });
@@ -24,7 +25,7 @@ module.exports.home=function(req,res){
         }
     }).exec(function(err,posts){
         return res.render('home',{
-            title:"codeial | home",
+            title:"coderhub | home",
             posts :posts
         });
     });

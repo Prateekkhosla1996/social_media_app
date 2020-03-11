@@ -1,0 +1,23 @@
+body {
+  background-color: darkslategray; }
+
+#signupuser {
+  width: 25vw;
+  padding: 10px;
+  border: 1px solid grey;
+  margin: 0 auto;
+  margin-top: 3rem;
+  border-radius: 2rem; }
+  #signupuser .container {
+    padding: 1.5rem; }
+  #signupuser input {
+    border-radius: 10px;
+    height: 2rem;
+    width: 20vw;
+    text-align: center; }
+
+h1 {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  padding: auto; }
