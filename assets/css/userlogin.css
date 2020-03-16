@@ -4,17 +4,27 @@ body {
 #signupuser {
   width: 25vw;
   padding: 10px;
-  border: 1px solid grey;
+  border: 1px solid white;
   margin: 0 auto;
-  margin-top: 3rem;
-  border-radius: 2rem; }
+  margin-top: 3rem; }
   #signupuser .container {
     padding: 1.5rem; }
-  #signupuser input {
-    border-radius: 10px;
+  #signupuser .userinfo {
+    border: none;
+    border-bottom: 2px solid grey;
     height: 2rem;
     width: 20vw;
     text-align: center; }
+  #signupuser #submitbutton {
+    border: none;
+    margin-left: 1.5rem;
+    text-align: center;
+    width: 20vw;
+    font-size: 18px;
+    text-transform: capitalize;
+    background-color: blue;
+    color: white;
+    border: none; }
 
 h1 {
   text-align: center;

@@ -38,9 +38,9 @@ app.set('views','./views');
 
 
 app.use(session({
-    name:'codiel',
+    name:'coderhub',
     //todo change the secret before deployment
-    secret:'blahsomthing',
+    secret:'somthing',
     saveUninitialized:false,
     resave:false,
     cookie:{

@@ -1,4 +1,19 @@
-footer{
-    background-color: gray;
-    height: 30vh;
+#layout-footer{
+    color: white;
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    margin-top: 75vh;
+    background: grey;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: flex-start;
+    position: sticky;
+
+    .footer-nav{
+        ul{
+            list-style: none;
+        }
+    }
 }

@@ -5,20 +5,35 @@ body{
 #signupuser{
 width: 25vw;
 padding: 10px;
-border: 1px solid grey;
+border: 1px solid white;
 margin: 0 auto;
 margin-top: 3rem;
-border-radius: 2rem;
+// border-radius: 2rem;
 .container{
     padding: 1.5rem;
 }
-input {
-    border-radius: 10px;
+.userinfo {
+    border:none;
+    border-bottom: 2px solid grey;
     height:2rem;
     width:20vw;
     text-align: center;
 
 }
+#submitbutton{
+    border: none;
+    margin-left: 1.5rem;
+    text-align: center;
+    width:20vw;
+    // padding :1rem;
+    font-size: 18px;
+    text-transform: capitalize;
+    background-color: blue;
+    color: white;
+    // border-radius: 4rem;
+    border: none;
+}
+
 
 }
 h1{
