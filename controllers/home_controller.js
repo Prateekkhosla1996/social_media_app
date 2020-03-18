@@ -24,10 +24,14 @@ module.exports.home=function(req,res){
             path:'user'
         }
     }).exec(function(err,posts){
-        return res.render('home',{
-            title:"coderhub | home",
-            posts :posts
-        });
+        User.find({},function(err,users){
+            return res.render('home',{
+                title:"coderhub | home",
+                posts :posts,
+                all_users:users
+            });
+        })
+       
     });
 }
 //module.exports.actionName=function(req,res){}
