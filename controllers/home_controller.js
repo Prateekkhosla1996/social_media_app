@@ -1,5 +1,5 @@
 const Post=require('../models/post');
-
+const User=require('../models/user');
 module.exports.home=function(req,res){
     // res.cookie('user_id',25);
     // post.find({},function(err,posts){

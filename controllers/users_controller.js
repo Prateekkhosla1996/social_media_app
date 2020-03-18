@@ -55,6 +55,6 @@ module.exports.createSession=function(req,res){
     return res.redirect('/');
 }
 module.exports.distroySession=function(req,res){
-    req.logout();
+    req.logout()
     return res.redirect('/');
 }
