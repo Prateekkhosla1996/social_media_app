@@ -1,23 +1,54 @@
 const Comment=require('../models/comment');
 const Post=require('../models/post');
+const commentsMailer=require('../mailers/comments_mailer')
+const queue=require('../config/kue');
+const commentEmailWorker=require('../workers/comment_email_worker');
+module.exports.create = async function(req, res){
 
-module.exports.create=function(req,res){
-    Post.findById(req.body.post,function(err,post){
-        if(post){
-            Comment.create({
-                content:req.body.content,
-                post:req.body.Post,
-                user:req.user._id
-            },
-            function(err,comment){
+    try{
+        let post = await Post.findById(req.body.post);
+        if (post){
+            let comment = await Comment.create({
+                content: req.body.content,
+                post: req.body.post,
+                user: req.user._id
+            });
+
             post.comments.push(comment);
             post.save();
-            req.flash('success','Comment is published!')
+            
+            comment = await comment.populate('user', 'name email').execPopulate();
+            // commentsMailer.newComment(comment);
+            let job = queue.create('emails',comment).save(function(err){
+                if(err){
+                    console.log('error in creating a queue',err);
+                    return;
+                }
+                console.log('job enqued',job.id)
+            })
+            if (req.xhr){
+                
+    
+                return res.status(200).json({
+                    data: {
+                        comment: comment
+                    },
+                    message: "Post created!"
+                });
+            }
+
+
+            req.flash('success', 'Comment published!');
+
             res.redirect('/');
-            });
         }
-    })
+    }catch(err){
+        req.flash('error', err);
+        return;
+    }
+    
 }
+
 
 module.exports.destroy=function(req,res){
     Comment.findById(req.params.id,function(err,comment){
