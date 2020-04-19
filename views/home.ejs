@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/css/home.css">
-    <h1>coderhub <%=title%></h1>
+<h1><%=title%></h1>
 <div id ="home-container">
     <section id="feed-posts">
         <h4>Post</h4>
@@ -30,3 +30,12 @@
     </section>
 </div>
 <script src="/js/home_posts.js"></script>
+<script src="/js/home_posts_comments.js"></script>
+<script src="js/toggle_likes.js"></script>
+<script>
+$('.toggle-like-button').each(function(){
+    let self=this;
+    let toggleLike=new ToggleLike(self);
+})
+
+</script>
