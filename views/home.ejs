@@ -42,6 +42,11 @@ $('.toggle-like-button').each(function(){
 })
 
 </script>
-<!-- <script>
-    new FroalaEditor('textarea');
-  </script>  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script src="/js/chat_engine.js"></script>
+<%if(locals.user){%>
+    
+    <script>
+        new chatEngine('users-chat-box','<%= locals.user.email%>')
+    </script>
+    <%}%>

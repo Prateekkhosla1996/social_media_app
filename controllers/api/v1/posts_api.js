@@ -1,5 +1,6 @@
 const Post=require('../../../models/post');
 const Comment=require('../../../models/comment')
+
 module.exports.index=async function(req,res){
 
     let posts=await Post.find({})
@@ -7,7 +8,7 @@ module.exports.index=async function(req,res){
     .populate({
         path:'comments',
         populate:{
-            path:'user'
+            path:'user' 
         }
     })
     return res.json(200,{
@@ -16,7 +17,6 @@ module.exports.index=async function(req,res){
     })
 
 }
-
 
 module.exports.destroy = async function(req, res){
 
@@ -37,7 +37,6 @@ module.exports.destroy = async function(req, res){
                 })
             }
         
-
     }catch(err){
         console.log("***********",err)
         return res.json(500,{

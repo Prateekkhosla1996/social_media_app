@@ -13,6 +13,11 @@ const MongoStore=require('connect-mongo')(session);
 const sassMiddleware=require('node-sass-middleware');
 const flash=require('connect-flash');
 const custommidware=require('./config/middleware');
+//set up chat server using socket.io
+const chatServer=require('http').Server(app);
+const chatSockets=require('./config/chat_sockets').chatSockets(chatServer);
+chatServer.listen(5000);
+console.log('chat server is listning on port 5000');
 app.use(sassMiddleware({
     src:'./assets/scss',
     dest:'./assets/css',
@@ -33,12 +38,9 @@ app.use(expressLayouts);
 app.set('layout extractStyles',true);
 
 app.set('layout extractScripts',true);
-
-
-
 //set up view engine
-
 app.set('view engine','ejs');
+
 app.set('views','./views');
 
 
@@ -61,9 +63,7 @@ app.use(session({
 }))
 app.use(passport.initialize());
 app.use(passport.session());
-
 app.use(passport.setAuthenticatedUser);
-
 app.use(flash());
 app.use(custommidware.setFlash);
 //use express router

@@ -1,7 +1,7 @@
 
 <link rel="stylesheet" href="/css/userlogin.css">
 
-<h1>sign up</h1>
+<h1 id="signupheading">sign up</h1>
 <div id="signupuser">
     <form action="/users/create" method="POST">
         <div class="container">
@@ -21,7 +21,9 @@
             <input type="submit" value="signup" id="submitbutton">
         </div>
         </form>
-        <p>
-            <a href="/users/auth/google">Google/sign in/sign up</a>
-        </p>
+        <div id="google-auth-container">
+            <p class="google-auth">
+                <a href="/users/auth/google">Google/signin/signup</a>
+            </p>
+        </div>
 </div>

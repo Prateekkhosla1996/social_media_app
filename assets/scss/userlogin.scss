@@ -1,13 +1,12 @@
 
-body{
-    background-color: darkslategray;
-}
+
 #signupuser{
 width: 25vw;
 padding: 10px;
 border: 1px solid white;
 margin: 0 auto;
 margin-top: 3rem;
+box-shadow: 1px 1px 1px 1px lightgray;
 // border-radius: 2rem;
 .container{
     padding: 1.5rem;
@@ -22,9 +21,11 @@ margin-top: 3rem;
 }
 #submitbutton{
     border: none;
-    margin-left: 1.5rem;
+    right: 20px;
     text-align: center;
-    width:20vw;
+    width:10vw;
+    height: 2rem;
+    margin-left: 5.5rem;
     // padding :1rem;
     font-size: 18px;
     text-transform: capitalize;
@@ -36,10 +37,32 @@ margin-top: 3rem;
 
 
 }
-h1{
+#signupheading{
     text-align: center;
-    color: white;
+    color: grey;
     text-transform: uppercase;
     padding: auto;
+
 }
 
+#google-auth-container{
+    width:11vw;
+    height: 2rem;
+    padding: 15px;
+    padding-bottom: -15px;
+    margin-left: 4.3rem;
+    border-radius: 20px;
+    background: red;
+box-shadow: 1px 1px 1px 1px lightgray;
+
+    p{
+        text-align: center;
+        
+    }
+    a{
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        
+    }
+}

@@ -1,19 +1,12 @@
-img{
-    display: block;
-    margin: auto;
-    padding:20px;
-    height: 250px;
-    width: 200px;
-}
 
-#profile-container{
+
+#signin-container{
     width: 25vw;
     padding: 10px;
     border: 1px solid white;
     margin: 0 auto;
     margin-top: 3rem;
     box-shadow: 1px 1px 1px 1px lightgray;
-    height: 40vh;
     // border-radius: 2rem;
     .container{
         padding: 1.5rem;
@@ -23,12 +16,9 @@ img{
         border-bottom: 2px solid grey;
         height:2rem;
         width:20vw;
-        padding: 1.5rem;
         text-align: center;
-        
     
     }
-   
     #submitbutton{
         border: none;
         right: 20px;
@@ -43,7 +33,6 @@ img{
         color: white;
         // border-radius: 4rem;
         border: none;
-        
     }
     
     
@@ -56,6 +45,24 @@ img{
     
     }
     
-  
+    #google-auth-container{
+        width:11vw;
+        height: 2rem;
+        padding: 15px;
+        padding-bottom: -15px;
+        margin-left: 4.3rem;
+        border-radius: 20px;
+        background: red;
+    box-shadow: 1px 1px 1px 1px lightgray;
     
-    
+        p{
+            text-align: center;
+            
+        }
+        a{
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            
+        }
+    }

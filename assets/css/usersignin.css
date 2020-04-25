@@ -1,28 +1,19 @@
-img {
-  display: block;
-  margin: auto;
-  padding: 20px;
-  height: 250px;
-  width: 200px; }
-
-#profile-container {
+#signin-container {
   width: 25vw;
   padding: 10px;
   border: 1px solid white;
   margin: 0 auto;
   margin-top: 3rem;
-  box-shadow: 1px 1px 1px 1px lightgray;
-  height: 40vh; }
-  #profile-container .container {
+  box-shadow: 1px 1px 1px 1px lightgray; }
+  #signin-container .container {
     padding: 1.5rem; }
-  #profile-container .userinfo {
+  #signin-container .userinfo {
     border: none;
     border-bottom: 2px solid grey;
     height: 2rem;
     width: 20vw;
-    padding: 1.5rem;
     text-align: center; }
-  #profile-container #submitbutton {
+  #signin-container #submitbutton {
     border: none;
     right: 20px;
     text-align: center;
@@ -40,3 +31,19 @@ img {
   color: grey;
   text-transform: uppercase;
   padding: auto; }
+
+#google-auth-container {
+  width: 11vw;
+  height: 2rem;
+  padding: 15px;
+  padding-bottom: -15px;
+  margin-left: 4.3rem;
+  border-radius: 20px;
+  background: red;
+  box-shadow: 1px 1px 1px 1px lightgray; }
+  #google-auth-container p {
+    text-align: center; }
+  #google-auth-container a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white; }
